@@ -57,6 +57,9 @@ bool tree_insert(tree_t **tree, int data)
 // 만들어 둔 BFS 알고리즘을 이용하여 트리를 모두 삭제하는 알고리즘
 void tree_destroy(tree_t **tree)
 {
+	if_null_return(tree, );
+	if_null_return(*tree, );
+
 	queue_t queue = { 0, };
 
 	queue_insert(&queue, *tree);
