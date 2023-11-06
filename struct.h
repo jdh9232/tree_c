@@ -1,5 +1,5 @@
-#ifndef _STRUCT_H
-#define _STRUCT_H
+#ifndef _STRUCT_H_
+#define _STRUCT_H_
 
 #include "util.h"
 
@@ -53,4 +53,4 @@ tree_t* queue_pop(queue_t *queue);
 void queue_destroy(queue_t *queue);
 
 
-#endif /* _STRUCT_H */
+#endif /* _STRUCT_H_ */
