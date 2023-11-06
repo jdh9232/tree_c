@@ -1,0 +1,11 @@
+# object file
+*.o
+
+# valgrind log file
+*.log
+
+# .vscode
+.vscode/cpptools/
+
+# binary
+tree
