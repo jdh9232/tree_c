@@ -1,0 +1,115 @@
+{
+    "folders": [
+        {
+            "name": "tree",
+            "path": "../"
+        }
+    ],
+    "settings": {
+        // 소스파일 길이가 너무 커지면 vscode가 버벅이는 것을 방지
+        "editor.maxTokenizationLineLength": 10000,
+        // terminal 저장될 스크롤
+        "terminal.integrated.scrollback": 50000,
+        // "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.linux":"zsh",
+        // 일반적인 쉘프로그램 (puTTY)처럼 터미널에서 선택하는것만으로도 복사
+        "terminal.integrated.copyOnSelection": true,
+        "C_Cpp.configurationWarnings": "enabled",
+        "debug.terminal.clearBeforeReusing": true,
+
+        "terminal.explorerKind": "integrated",
+        "terminal.integrated.allowMnemonics": true,
+
+        "search.followSymlinks": true,
+        // 시딩하지 않음
+        "editor.find.seedSearchStringFromSelection": "never",
+        "editor.definitionLinkOpensInPeek": false,
+
+        "problems.showCurrentInStatus": false,
+        "problems.sortOrder": "severity",
+
+        "trailing-spaces.trimOnSave": true,
+        "github.copilot.editor.enableAutoCompletions": true,
+
+        // EXTENSION - Vim
+        // https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+        "vim.useSystemClipboard": true,
+
+        // vscode 파일에서 아예 보여지지 않음.
+        "files.exclude": {
+            "*.o": true,
+            "**/*.o": true,
+        },
+        // vscode 변경내역 추적 대상에서 제외.
+        "files.watcherExclude": {
+            "**/.svn/**": true,
+            "**/.git/*/**": true,
+            "**/*.o*": true,
+            "*.o*": true,
+            "**/node_modules/*/**": true,
+        },
+
+        // C_pp 확장이 해당 디렉토리/파일은 무시함. (구문분석, intellisense 등)
+        "C_Cpp.files.exclude": {
+            "**/.vscode": true,
+        },
+
+        // sidebar - 검색 창에서 해당 디렉토리/파일의 내용은 무시함
+        "search.exclude": {
+            // "**/.vscode/**/*[!{md,http}]": true,
+            "/.vscode/**/*.{json,sql,sh,env,natvis,txt,log}": true,
+            "**/*.code-search": true,
+        },
+
+        // editor 세로줄 세팅
+        "editor.rulers": [
+            80,
+            {
+                "column": 100,
+                "color": "#693f07"
+            },
+            {
+                "column": 120,
+                "color": "#3a0707"
+            },
+        ],
+
+        "gitlens.advanced.externalDiffTool": "bcompare",
+
+        // vscode 정렬 포멧
+        "C_Cpp.formatting": "vcFormat",
+        "C_Cpp.errorSquiggles": "enabled",
+        "C_Cpp.intelliSenseEngineFallback": "enabled",
+        "C_Cpp.intelliSenseEngine": "default",
+        "C_Cpp.intelliSenseCachePath": "${workspaceFolder:tree}/.vscode/cpptools",
+        "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
+        "C_Cpp.loggingLevel": "Debug",
+        "C_Cpp.default.cppStandard": "c++14",
+        "C_Cpp.default.cStandard": "c11",
+        // "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+        // // "C_Cpp.codeAnalysis.clangTidy.args": ["-checks=-*,clang-analyzer-*"],
+        // "C_Cpp.codeAnalysis.clangTidy.args": ["-checks=-*,clang-analyzer-alpha*"],
+
+        // 파일 포맷
+        "files.associations": {
+            "*.c": "c",
+            "*.h": "cpp",
+            "*.y": "c",
+            "*.py": "python",
+            "*.log": "log",
+            "*.log.*": "log",
+            "Makefile*": "makefile",
+        },
+
+        "manpages.binary.path": "/usr/bin/man",
+        "C_Cpp.codeAnalysis.runAutomatically": false,
+        "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+        "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
+        "git.repositoryScanMaxDepth": 0,
+        "git.detectSubmodules": false,
+        "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+        "debug.onTaskErrors": "debugAnyway",
+
+        "gitlab.ignoreCertificateErrors": true,
+    },
+}
